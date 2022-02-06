@@ -1,0 +1,274 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+/* html{
+	font-size: 62.5%
+} */
+.video {
+  background: rgba(0, 0, 0, 0.3);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: fixed;
+  z-index: -5;
+}
+
+.video video {
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+  height: auto;
+  top: 0;
+  left: 0;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+.top-text {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.text-c {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50vh;
+  transform: translateY(-50%);
+  margin-left: 4rem;
+  color: #ecf0f3;
+  font-family: "Hind Siliguri", sans-serif;
+}
+.text-c .vid-text {
+  padding-bottom: 25px;
+  font-size: 3.5rem;
+  font-weight: 500;
+  letter-spacing: 4px;
+  line-height: 135%;
+}
+
+.text-c .watch {
+  font-size: 1.5rem;
+  font-weight: 50;
+  padding-left: 10px;
+}
+.play-video {
+  display: flex;
+}
+
+.play-video .far {
+  font-size: 2rem;
+  transform-origin: center;
+  color: #999;
+  transition: all 0.5s;
+}
+
+.play-video .far:hover {
+  color: #fff;
+}
+
+.about-body {
+  width: 100vw;
+  background: #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.capture {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.capture h1 {
+  font-size: 5rem;
+  font-family: "Comfortaa", cursive;
+  padding: 6rem 0;
+}
+
+.cont1 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  height: 35vw;
+  width: 100%;
+  background: yello;
+  margin-bottom: 4rem;
+}
+
+.img1 {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: -10px 15px 15px -1px rgba(0, 0, 0, 0.8);
+}
+
+.back1 {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back1 h2 {
+  padding-left: 4rem;
+  font-size: 3rem;
+  font-family: "Cabin", sans-serif;
+}
+
+.cont2 {
+  height: 35vw;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.img2 {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 10px 15px 15px -1px rgba(0, 0, 0, 0.8);
+}
+
+.back2 {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+.back2 h2 {
+  padding-right: 3rem;
+  padding-bottom: 0.5rem;
+  font-size: 2rem;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.back2 p {
+  padding-right: 4rem;
+  font-size: 2rem;
+  font-family: "Cabin", sans-serif;
+}
+
+.v-m {
+  background: #000;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.v-m .cont {
+  width: 95%;
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+}
+.v-m .cont .pic {
+  background: url(../SOURCES/logo.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 48%;
+  height: 100%;
+}
+
+.v-m .cont .drop {
+  width: 48%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  overflow: hidden;
+  margin-right: 0;
+}
+
+.items {
+  border-bottom: 2px solid #999;
+  overflow: hidden;
+}
+
+.btn {
+  display: block;
+  padding: 20px 0;
+  color: #999;
+  font-size: 3rem;
+  font-family: "Hind Siliguri", sans-serif;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+}
+
+.smenu {
+  transition: max-height 0.5s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.smenu p {
+  display: block;
+  padding-bottom: 40px;
+  padding-right: 10px;
+  color: #fff;
+  font-size: 1.8rem;
+  font-family: "Cabin", sans-serif;
+}
+
+.items:hover .smenu {
+  max-height: 10rem;
+}
+
+.items:hover .btn {
+  color: #fff;
+}
+
+@media screen and (max-width: 750px) {
+  .text-c h1 {
+    font-size: 2.7rem;
+  }
+  .text-c .watch {
+    font-size: 1.4rem;
+  }
+  .play-video .far {
+    font-size: 2.4rem;
+  }
+  .cont {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .v-m .cont .drop {
+    width: 80%;
+  }
+  .cont1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+	font-size: 1rem;
+  }
+}

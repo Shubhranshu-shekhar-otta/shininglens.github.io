@@ -1,0 +1,91 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.card-wrapper{
+	 font-family: 'Josefin Sans', sans-serif;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	flex-direction: column;
+}
+.card{
+	width: 18rem;
+	background-color: #ebeef8;
+	display: flex;
+	border-radius: 20px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0.5rem 0;
+}
+.card .card-img{
+	width: 100%;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	height: 12rem;
+	object-fit: cover;
+	clip-path: polygon(0 0%, 100% 0, 100% 80%, 0% 100%);
+	-webkit-clip-path: polygon(0 0%, 100% 0, 100% 80%, 0% 100%);
+}
+.profile-img{
+	width: 10rem;
+	height: 10rem;
+	object-fit: cover;
+	border-radius: 50%;
+	margin-top: -7rem;
+	border:0.3rem solid #ebeef8;
+	z-index: 2;
+}
+
+.card h1{
+	font-size: 1.5rem;
+	font-family: 'Orbitron', sans-serif;
+	color: #333;
+	text-transform: uppercase;
+
+}
+
+.job-title{
+	color: #777;
+	font-size: 1.3rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.about{
+	font-size: 1rem;
+	margin: 0.3rem 0.5rem;
+	font-style: italic;
+	text-align: center;
+	color: #333;
+}
+
+
+.social-media{
+	width: 100%;
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 0.5rem 0;
+	margin-top: 0.5rem;
+	border-top: 1px solid rgba(0,0,0,0.3)
+}
+
+.social-media i{
+	font-size: 2rem;
+
+}
+.fa-facebook{
+    color: #3b5999;
+}
+.fa-twitter{
+	color: #55acee;
+}
+.fa-instagram{
+	color: #e6683c;
+}
+.fa-whatsapp{
+	color: #dd4b39;
+}

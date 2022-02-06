@@ -1,0 +1,34 @@
+<style>
+        /*jssor slider loading skin spin css*/
+        .jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-009-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /*jssor slider bullet skin 102 css*/
+        .jssorb102 .i {position:absolute;cursor:pointer;}
+        .jssorb102 .i .ci {fill:#fff;}
+        .jssorb102 .i .co {fill:#000;opacity:.2;}
+        .jssorb102 .i:hover .co {fill:#ff9933;opacity: 1;}
+        .jssorb101 .i:hover .ci {fill:#000;}
+        .jssorb102 .iav .ci {fill:#000;stroke-width:0;}
+        .jssorb102 .iav .co {fill:#ffba04;opacity: 1;}
+        .jssorb102 .i.idn {opacity:.3;}
+
+        /*jssor slider arrow skin 106 css*/
+        .jssora106 {display:block;position:absolute;cursor:pointer;}
+        .jssora106 .c {fill:#fff;opacity:.3;}
+        .jssora106 .a {fill:none;stroke:#000;stroke-width:350;stroke-miterlimit:10;}
+        .jssora106:hover .c {opacity:.5;}
+        .jssora106:hover .a {opacity:.8;}
+        .jssora106.jssora106dn .c {opacity:.2;}
+        .jssora106.jssora106dn .a {opacity:1;}
+        .jssora106.jssora106ds {opacity:.3;pointer-events:none;}
+    </style>

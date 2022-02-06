@@ -1,0 +1,232 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.preload{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: rgb(255, 255, 255);
+	z-index: 10000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: opacity 0.5sec ease;
+}
+.preload-finish{
+	opacity: 0;
+    pointer-events: none;
+}
+
+.preload img{
+	height: 80vh;
+}
+
+body{
+	overflow-x: hidden;
+}
+
+a{
+	text-decoration: none;
+	color: #eee;
+}
+
+
+nav{
+	width: 100%;
+	z-index: 1000;
+	padding: 0.3rem 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-height: 15vh;
+	background: black ;
+	position: sticky;
+	top: 0px;
+}
+
+
+nav .logo{
+	z-index: 2000;
+	transform: translateX(-1000rem);
+	animation: slideIn 0s forwards;
+}
+
+.nav-links{
+	display: flex;
+	align-items: center;
+	font-family: "roboto Cn", sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+@keyframes slideIn{
+	to{
+		transform: translateX(0);
+	}
+}
+
+.nav-links li{
+	list-style: none;
+	transform: translateX(1000rem);
+	animation: slideIn 0.5s forwards;
+}
+
+.nav-links li:nth-child(1){
+	animation-delay: 0s;
+}
+
+.nav-links li:nth-child(2){
+	animation-delay: 0.25s;
+}
+
+.nav-links li:nth-child(3){
+	animation-delay: 0.5s;
+}
+
+.nav-links li:nth-child(4){
+	animation-delay: 0.75s;
+}
+
+.nav-links li:nth-child(5){
+	animation-delay: 1s;
+}
+
+
+.nav-links li a{
+	margin: 0 1rem;
+	position: relative;
+	letter-spacing: 1px;
+	padding: 5px;
+}
+
+.nav-links li a:last-child{
+	margin-right: 1;
+}	
+
+nav div.resister{
+	z-index: 5;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background-image: url(../sources/login.png);
+	background-size: cover;
+}
+
+.nav-links li a::before,
+.nav-links li a::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	background-color: crimson;
+	left: 0;
+	transform: scaleX(0);
+	transition: all .5s;
+}
+
+.nav-links li a::before{
+	top: 0;	
+	transform-origin: left;
+}
+.nav-links li a::after{
+	bottom: 0;
+	transform-origin: right;
+}
+
+.nav-links li a:hover::before,
+.nav-links li a:hover::after{
+	transform: scaleX(1);
+}
+
+
+
+/*for responsive*/
+.burger{
+	z-index: 1200;
+	display: none;
+	cursor: pointer;
+}
+
+.burger div{
+	width: 28px;
+	height: 3px;
+	border-radius: 5px;
+	background-color: #fff;
+	margin: 6px;
+	margin-left: 0;
+}
+.burger:hover div.line2{
+	transition: all 0.5s;
+	transform: scaleX(0.7);
+}
+
+/*for mobile*/
+
+@media screen and (max-width: 800px){
+
+
+	.logo{
+		transform: translateX(0rem);
+		z-index: 1200;
+	}
+
+	.nav-links {
+		position: absolute;
+		right: 0px;
+		height: 100vh;
+		top: 0;
+		background-color: rgba(0, 0, 0, 1);
+
+		display: flex;
+		padding-top: 5rem;
+		padding-bottom: 1rem;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		width: 100%;
+		transform: translateX(100%);
+		opacity:50%  0.5s;
+		transition: transform 0.5s ease-out;
+	}
+
+
+	.burger {
+		display: block;
+		margin-right: 3rem;
+	}
+
+
+	.burger div{
+		justify-content: center;
+		position: center;
+		padding-left: relative;
+		margin-left: relative;
+	}
+
+	.nav-active{
+		transform: translateX(0%); 
+		opacity: 100%; 
+	}
+
+	.nav-links li{
+		transform: translateX(0);
+	}
+
+}
+
+
+.toggle .line1{
+	transform: rotate(-45deg) translate(-6.5px,6px);
+}
+
+.toggle .line2{
+	opacity: 0;
+}
+
+.toggle .line3{
+	transform: rotate(45deg) translate(-6.5px,-6px);
+}
